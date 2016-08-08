@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'crispy_forms',
     'home',
+    'userpanel',
 ]
 
 MIDDLEWARE = [
@@ -128,7 +129,7 @@ STATICFILES_DIRS = [
 
 ACCOUNT_ACTIVATION_DAYS = 3
 REGISTRATION_AUTO_LOGIN = True
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/dashboard/"
 CRISPY_TEMPLATE_PACK='bootstrap3'
 
 SITE_ID=1

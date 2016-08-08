@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from home import views as homeviews
+from userpanel import views as userpanelviews
 import registration
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', homeviews.home, name='home'),
     url(r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^dashboard/', userpanelviews.dashboard)
 ]
