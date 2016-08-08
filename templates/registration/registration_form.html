@@ -1,0 +1,21 @@
+{% extends 'regbase.html' %}
+
+{% load i18n %}
+
+{% load crispy_forms_tags %}
+{% block head %}
+Register for BITSMUN
+{% endblock %}
+{% block content %}
+
+<form method="post" action=".">
+  {% csrf_token %}
+  {{ form|crispy }}
+
+  <input class='btn btn-block btn-primary' type="submit" value="{% trans 'Register' %}" />
+</form>
+
+{% endblock %}
+{% block lowcontent %}
+<p>{% trans "Already registered?" %}<a href="{% url 'auth_login' %}">Login</a></p>
+{% endblock %}

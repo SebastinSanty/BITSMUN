@@ -11,7 +11,7 @@
 7. Run the webserver: `python manage.py runserver`
 
 ##Additional Instructions
-1. To edit the templates, go to the templates folder which has all the templates. Note that direct links \(<a href>\) won't work in Django backend. Hence please route it through the urls.py in bitsmun folder
+1. To edit the templates, go to the templates folder which has all the templates. Note that direct links \(\<a href\>\) won't work in Django backend. Hence please route it through the urls.py in bitsmun folder
 
 
 ##Authors
