@@ -33,13 +33,17 @@ class Profile(models.Model):
 	def __str__(self):
 		return self.name
 
-class Delegate(models.Model):
+class ExecutiveBoard(models.Model):
 	position = models.CharField(max_length = 20, choices=POSITION_CHOICES)
 	previous_mun_exp = models.TextField(blank = False, null = False)
 	previous_org_com_exp = models.TextField(blank = True, null = True)
 	previous_exe_board_exp = models.TextField(blank = False, null = False)
 	other_exp = models.TextField(blank = True, null = True)
 	slide_position = models.TextField(max_length = 1, choices = SLIDE_CHOICES)
+	file = models.FileField(upload_to = "useruploads/")
+	ques1 = models.TextField(blank = True, null = True)
+	ques2 = models.TextField(blank = True, null = True)
+	ques3 = models.TextField(blank = True, null = True)
 
 	def __str__(self):
 		return self.name

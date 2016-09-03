@@ -6,9 +6,6 @@
 Sign in to BITSMUN
 {% endblock %}
 {% block content %}
-
-
-
 <form method="post" action=".">
   {% csrf_token %}
   {{ form|crispy }}
