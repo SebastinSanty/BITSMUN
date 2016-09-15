@@ -25,7 +25,7 @@ http://bitsmungoa.in/{% url 'registration_activate' activation_key %}
 {% blocktrans %}
 
 If the above links do not work, or you have any other issues regarding
-your account, please contact administration at support@bits-quark.org.
+your account, please contact administration at webadmin@bitsmungoa.in.
 
 -Team BITSMUN 2017
 

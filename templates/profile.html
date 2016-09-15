@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Profile - Waves 2016
+Profile - BITSMUN 2017
 {% endblock %}
 
 {% block heading %}
@@ -16,6 +16,14 @@ Profile
 </div>
 <br><br>
 <p>Hello {{ request.user }},</p>
-<p>Thanks for registering for Waves 2016. We are privileged to host you at our upcoming festival. Register for events by clicking the Events Tab.</p>
+<p>Thanks for registering for BITSMUN 2017. We are privileged to host you at our upcoming festival. Register for events by clicking the Events Tab.</p>
+<br><br>
+	<table class = "table table-striped">
+            {% for field in u %}
+    <tr>
+    <td><b>{{ field.label }}</b></td><td> {{ field.data }}</td>
+    </tr>
+{% endfor %}
 </table>
+<a href="{% url 'fillprofile' %}"><button class = "btn btn-primary">Update Profile</button></a>
 {% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Executive Board - BITSMUN 2017
+{% endblock %}
+
+{% block heading %}
+Executive Board
+{% endblock %}
+
+{% block content %}
+<div class="row">
+	<!-- <div class="col-sm-2 col-sm-offset-10">
+		<img src = "" style = "height:100px">
+	</div> -->
+</div>
+<br><br>
+<p>Hello {{ request.user }},</p>
+<p>Thanks for registering for BITSMUN 2017. You have already registered for Executive Board. If you want to change you are free to do so, until 10th October 2016</p>
+<br><br>
+
+<a href="{% url 'executive_board_reg' %}"><button class = "btn btn-primary">Update Application</button></a>
+{% endblock %}

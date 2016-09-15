@@ -77,12 +77,6 @@ WSGI_APPLICATION = 'bitsmun.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 
 # Password validation
@@ -126,10 +120,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static", "assets"),
     # '/var/www/static/',
 ]
+STATIC_ROOT = '/home/bitsfest/webapps/wavesstatic'
 
 ACCOUNT_ACTIVATION_DAYS = 3
 REGISTRATION_AUTO_LOGIN = True
-LOGIN_REDIRECT_URL = "/dashboard/"
+LOGIN_REDIRECT_URL = "/profile/"
 CRISPY_TEMPLATE_PACK='bootstrap3'
 
 SITE_ID=1

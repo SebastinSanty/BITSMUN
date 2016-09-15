@@ -141,7 +141,7 @@
                     <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                            <a href="/profile"><i class="fa fa-fw fa-user"></i> Profile</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-fw fa-support"></i> Support</a>
@@ -157,6 +157,7 @@
                 </li>
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            {% if request.user.profile %}
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
@@ -168,13 +169,13 @@
                          
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="#"><i class="fa fa-fw fa-user"></i>Executive Board</a>
+                                <a href="/executive_board"><i class="fa fa-fw fa-user"></i>Executive Board</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-fw fa-user"></i>Delegates</a>
+                                <a href="/delegates"><i class="fa fa-fw fa-user"></i>Delegates</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-fw fa-user"></i>Press Members</a>
+                                <a href="/press_members"><i class="fa fa-fw fa-user"></i>Press Members</a>
                             </li>
                         </ul>
                     </li>
@@ -193,6 +194,7 @@
                     </li> -->
                 </ul>
             </div>
+            {% endif %}
             <!-- /.navbar-collapse -->
         </nav>
 

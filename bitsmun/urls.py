@@ -23,5 +23,11 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', homeviews.home, name='home'),
     url(r'^accounts/', include('registration.backends.default.urls')),
-    url(r'^dashboard/', userpanelviews.dashboard)
+    url(r'^dashboard/', userpanelviews.dashboard),
+    url(r'^profile/', userpanelviews.SeeProfile, name = 'profile'),
+    url(r'^executive_board/', userpanelviews.executive_board, name = 'executive_board'),
+    url(r'^executive_board_reg/', userpanelviews.executive_board_reg, name = 'executive_board_reg'),
+    url(r'^delegates/', userpanelviews.delegates),
+    url(r'^press_members/', userpanelviews.press_members),
+    url(r'^updateprofile/', userpanelviews.FillProfile, name = 'fillprofile'),
 ]

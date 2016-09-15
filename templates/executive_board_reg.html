@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+
+{% block title %}
+Executive Board - Waves 2016
+{% endblock %}
+
+{% block media %}
+{% endblock %}
+
+{% block heading %}
+Executive Board
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<p>Hello {{ request.user.profile.name }},</p>
+<p>Please fill in the Executive Board Application to proceed with the registration</p>
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form|crispy }}
+		<input class = "btn btn-primary" type = "submit" value = "Update">
+	</form>
+{% endblock %}

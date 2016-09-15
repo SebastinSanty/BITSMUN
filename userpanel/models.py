@@ -34,16 +34,17 @@ class Profile(models.Model):
 		return self.name
 
 class ExecutiveBoard(models.Model):
+	user = models.OneToOneField(User, on_delete = models.CASCADE)
 	position = models.CharField(max_length = 20, choices=POSITION_CHOICES)
 	previous_mun_exp = models.TextField(blank = False, null = False)
 	previous_org_com_exp = models.TextField(blank = True, null = True)
 	previous_exe_board_exp = models.TextField(blank = False, null = False)
 	other_exp = models.TextField(blank = True, null = True)
-	slide_position = models.TextField(max_length = 1, choices = SLIDE_CHOICES)
-	file = models.FileField(upload_to = "useruploads/")
+	slide_position = models.CharField(max_length = 1, choices = SLIDE_CHOICES)
+	file = models.FileField(upload_to = "useruploads/", blank = True, null = True)
 	ques1 = models.TextField(blank = True, null = True)
 	ques2 = models.TextField(blank = True, null = True)
 	ques3 = models.TextField(blank = True, null = True)
 
 	def __str__(self):
-		return self.name
+		return self.user.username
